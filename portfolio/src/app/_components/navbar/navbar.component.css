@@ -1,0 +1,22 @@
+.navbar {
+  background-color: rgba(51, 51, 51, 0.226) !important;
+  z-index: 1000;
+  position: relative;
+  }
+
+  .navbar .nav-link{
+    color: #ffff;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .navbar .nav-link:hover{
+    color: #ffffffe3;
+    transform: scale(1.1);
+  }
+
+  .navbar-toggler-icon {
+    background-color: #ffff; 
+}
+
+  
+

@@ -1,0 +1,185 @@
+body{
+    background: #0259f0;
+    height: 100vh;
+}
+
+.container{
+    margin-top: 10%;
+    
+}
+
+.card{
+    width: 30%;
+    height: 350px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: inherit;
+    margin: 0 auto;
+    animation: fallAnimation 1s ease-out;
+   
+}
+p{
+    color: #ffff;
+}
+
+.card .box{
+    position: absolute;
+    color: #262626;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    background: #ffff;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+}
+
+.card .box.front{
+    background-image: url(../../../assets/conect.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .box.front,
+.card .box.back{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .box.front img{
+    width: 130px;
+    height: 240px;
+    margin-top:25px;
+    border-radius: 5%;
+    object-fit: cover;
+    
+    margin-bottom: 25px;
+}
+
+.card:hover .box.front{
+    transform: rotateY(180deg);
+}
+
+.box.front h2{
+    color: #ffff;
+    font-size: 16px;
+}
+
+.box.front h4{
+    color: #ffff;
+}
+
+.box.front i{
+    color: #ffff;
+    
+}
+
+.socials i{
+    margin: 0 15px;
+   
+}
+
+.card .box.back{
+    position: absolute;
+    background: #000;
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+}
+
+.card .box.back .fa-quote-left{
+    position: absolute;
+    color: #ffff;
+    top: 25px;
+    left: 180px;
+    font-size: 3.2rem;
+}
+
+.card:hover .box.back{
+    transform: rotateY(360deg);
+}
+
+
+.card .box .socials i {
+    font-size: 40px !important; 
+    color: #ffff;
+   
+}
+
+.descricao {
+    margin-top: 45px; 
+}
+
+@keyframes fallAnimation {
+    0% {
+        transform: translateY(-200px); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+.card.animate {
+    animation: fallAnimation 1s ease-out forwards; 
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-top: 45px;
+        width: 70%;  
+        height: 300px;
+    }
+
+    .card .box.front img {
+        width: 100px; 
+        height: 200px;
+        margin-top: 15px    ;
+    }
+
+    .box.front h2, .box.front h4 {
+        font-size: 16px; 
+    }
+
+    .socials i {
+        font-size: 30px; 
+    }
+    .fa-quote-left{
+        display: none;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .card {
+        width: 80%;  
+        height: 250px; 
+    }
+
+    .card .box.front img {
+        width: 80px;  
+        height: 160px; 
+    }
+
+    .box.front h2, .box.front h4 {
+        font-size: 12px; 
+    }
+
+    .socials i {
+        font-size: 25px; 
+    }
+
+    .fa-quote-left{
+        display: none;
+    }
+}
+
+

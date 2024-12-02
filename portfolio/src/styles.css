@@ -1,0 +1,39 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+body {
+  background-image: url('assets/conect.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  min-height: 100%;  
+  overflow-x: hidden;  
+}
+
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+body.sobremim {
+  background-image: none;  
+  background-color: #f0f0f0; 
+}
+
+.form-floating label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  transition: all 0.2s ease-in-out;
+}
+

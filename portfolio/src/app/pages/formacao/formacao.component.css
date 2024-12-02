@@ -1,0 +1,154 @@
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; 
+  
+    justify-content: space-around; 
+    padding: 150px 30px 30px 30px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  
+  .card {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: row;
+    max-width: 240px;
+    border: none;
+    border-radius: 10px;
+ 
+  }
+  
+
+  .imagem-container {
+  
+    border-radius: 10px 0 0 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  
+  .texto-container, p {
+    border-radius: 0 10px 10px 0;
+    padding: 4px;
+    color: #ffff;
+  }
+  small{
+    color: #ffff;
+ }
+
+ @media (max-width: 768px) {
+    .cards-container {
+      flex-direction: column; 
+      padding: 20px;
+    }
+  }
+    .card {
+      width: 100%; 
+    }
+  
+    .imagem-container,
+    .texto-container {
+      border-radius: 10px; 
+    }
+  
+  
+
+  
+@keyframes slideFromLeft {
+  0% {
+    transform: translate(-100%, 50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0); 
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translate(100%, 50px); 
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+
+.card {
+  opacity: 0;  
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  transition: transform 0.3s ease-out; 
+}
+
+ 
+.card:nth-child(odd) { 
+  animation: slideFromLeft 1s ease-out forwards;
+}
+
+ 
+.card:nth-child(even) {
+  animation: slideFromRight 1s ease-out forwards;
+}
+
+ 
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  padding: 150px;
+  gap: 20px;  
+}
+
+ 
+.card {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: row;
+  max-width: 240px;
+  border: none;
+  border-radius: 10px;
+}
+
+
+.imagem-container {
+  border-radius: 10px 0 0 10px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+.texto-container, p {
+  border-radius: 0 10px 10px 0;
+  padding: 4px;
+  color: #ffff;
+}
+
+small {
+  color: #ffff;
+}
+
+
+@media (max-width: 768px) {
+    .cards-container {
+      flex-direction: column;
+      padding: 20px; 
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+  }
+
+
+
+
+
